@@ -3,6 +3,8 @@ import { AppComponent } from './app.component';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By }           from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
+import { AppModule } from './app.module';
+
 
 describe('AppComponent', function () {
   let de: DebugElement;
@@ -11,7 +13,8 @@ describe('AppComponent', function () {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AppComponent ]
+      declarations: [ AppComponent ],
+      imports : [ AppModule ]
     })
     .compileComponents();
   }));
